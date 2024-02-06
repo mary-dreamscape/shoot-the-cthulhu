@@ -1,7 +1,7 @@
 name: "Publish to GitHub Pages"
 
 env:
-  GODOT_VERSION: 3.4.4
+  GODOT_VERSION: 3.3.3
 
 on:
   workflow_dispatch:
@@ -16,7 +16,7 @@ jobs:
       contents: write
 
     container:
-      image: barichello/godot-ci:3.4.4
+      image: barichello/godot-ci:3.3.3
 
     steps:
       - name: Checkout
@@ -37,7 +37,7 @@ jobs:
           git clone https://github.com/gzuidhof/coi-serviceworker.git
           mv coi-serviceworker/coi-serviceworker.js build/web/coi-serviceworker.js
           sed -i '3 i <script src="coi-serviceworker.js"></script>' build/web/index.html
-          
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.9.3
         with:
