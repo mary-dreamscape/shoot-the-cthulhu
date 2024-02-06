@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/purple.png" type="Texture" id=1]
+[ext_resource path="res://Assets/THE.png" type="Texture" id=2]
+[ext_resource path="res://Assets/SHOOT.png" type="Texture" id=3]
+[ext_resource path="res://Menu.gd" type="Script" id=4]
+[ext_resource path="res://Assets/CTHULHU.png" type="Texture" id=5]
+
+[node name="Menu" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 540, 960 )
+
+[node name="Shoot" type="Sprite" parent="Sprite"]
+position = Vector2( 264, 168 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="The" type="Sprite" parent="Sprite"]
+position = Vector2( 256, 232 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Cthulhu" type="Sprite" parent="Sprite"]
+position = Vector2( 272, 296 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 144.0
+margin_top = 392.0
+margin_right = 236.0
+margin_bottom = 412.0
+rect_scale = Vector2( 2.5, 2.5 )
+text = "START GAME"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 64.0
+margin_top = 512.0
+margin_right = 296.0
+margin_bottom = 640.0
+rect_scale = Vector2( 2, 2 )
+text = "Instructions:
+
+To move: W A S D keys
+To shoot: Mouse left click
+
+Get to 300 points to win!!"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

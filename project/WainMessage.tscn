@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/purple.png" type="Texture" id=1]
+
+[node name="WainMessage" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 540, 960 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 13.0
+margin_top = 55.0
+margin_right = 303.0
+margin_bottom = 554.0
+rect_scale = Vector2( 1.8, 1.8 )
+text = "WAAAAIN.
+
+You did it! HEHE I hope you had fun.
+
+Happy birthdayyyy! I hope you have a really amazing birthday today. It's YOUR day and don't let anyone tell you otherwise. You're one of the most coolest people I know in my life and I hope you know how great you are. Even when you're at your lowest, please remember that you're RAMZI ALUOR. Well, not the character but more like a role model that you managed to turn yourself into, inspiring people to become amazing game master like you. And it's not just how you managed to always torture our characters and make us have the time of our life at the same time, it's your art, your talent, your writing, that gorgeous gorgeous brain of yours.
+
+We all love you, Wain, and I love you lots. Thank you for always being there whenever I needed someone to run to, for listening to my problems with my mom and everything else. This day is yours and you better grab it by the neck and have the best time of your life.
+
+Looooooads of love,
+Maryam :3"
